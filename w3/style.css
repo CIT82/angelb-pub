@@ -13,16 +13,43 @@ html, body {
     height: 48px; /* Height of one frame in your sprite sheet */
     background: url('images/Trainer.png') no-repeat;
     position: absolute; /* Allow the sprite to move freely within the container */
+   z-index: 10;
     top: 200px; /* Starting position */
     left: 200px; /* Starting position */
 }
 
 #safari-container {
-    width: 500px;  /* Set the width of the container */
-    height: 500px; /* Set the height of the container */
-    background: url('images/PokeGrass.png') no-repeat;
-    background-size: cover; /* Cover the container with the background image */
     position: relative;
-    margin: 0 auto; /* Center the container horizontally */
-    overflow: hidden; /* Prevent overflow issues */
+    width: 500px;  /* Adjust to your container size */
+    height: 500px; /* Adjust to your container size */
+    background-image: url('/images/Pokegrass.png'); 
+    background-size: cover; 
+}
+
+.grass-patch {
+    width: 32px;  /* Larger width for the grass patch */
+    height: 32px; /* Larger height for the grass patch */
+    background-image: url('images/Grass.png');
+    background-size: cover;  /* Ensure the image scales to cover the patch */
+    position: absolute;  /* Allows positioning within the container */
+    z-index: 1;
+}
+
+.shiny-grass {
+    background-image: url('images/Shinygrass.png');  /* Switch to shiny grass */
+    animation: grassAnimate 0.5s steps(4) forwards;  /* Animation effect */
+}
+
+@keyframes grassAnimate {
+    from { background-image: url('images/Grass.png'); }
+    to { background-image: url('images/Shinygrass.png'); }
+}
+
+.grass-fade-out {
+    animation: grassAnimateOut 2s ease-in-out forwards;  /* Smooth transition back */
+}
+
+@keyframes grassAnimateOut {
+    from { background-image: url('Shinygrass.png'); }
+    to { background-image: url('Grass.png'); }
 }
