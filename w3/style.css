@@ -1,0 +1,28 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    background-color: #ffffff; /* Optional: To match the rest of the page */
+}
+
+
+#player-sprite {
+    width: 32px;  /* Width of one frame in your sprite sheet */
+    height: 48px; /* Height of one frame in your sprite sheet */
+    background: url('images/Trainer.png') no-repeat;
+    position: absolute; /* Allow the sprite to move freely within the container */
+    top: 200px; /* Starting position */
+    left: 200px; /* Starting position */
+}
+
+#safari-container {
+    width: 500px;  /* Set the width of the container */
+    height: 500px; /* Set the height of the container */
+    background: url('images/PokeGrass.png') no-repeat;
+    background-size: cover; /* Cover the container with the background image */
+    position: relative;
+    margin: 0 auto; /* Center the container horizontally */
+    overflow: hidden; /* Prevent overflow issues */
+}
