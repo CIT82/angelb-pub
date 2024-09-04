@@ -23,6 +23,7 @@ playerSprite.style.left = "200px";
 let isMoving = false;
 let moveDirection = null;
 let animationInterval = null;
+let pokemonAppeared = false;  // New variable to track if the Pokémon has appeared
 
 const stepSize = 1.5;  // Smaller step size for smoother motion
 const animationSpeed = 10;  // Frame change every 10 animation cycles
@@ -160,10 +161,56 @@ function checkCollision() {
             
             patch.classList.add('shiny-grass');  // Apply the shiny grass effect
 
+            // If the Pokémon hasn't appeared yet, trigger the encounter
+            if (!pokemonAppeared) {
+                triggerPokemonEncounter('images/Inky.gif');  // Replace with your Pokémon image path
+                pokemonAppeared = true;  // Set flag to true so it only happens once
+            }
+
             // Set a timeout to revert to regular grass after 10 seconds
             setTimeout(() => {
                 patch.classList.remove('shiny-grass');  // Revert to regular grass
-            }, 1000); 
+            }, 10000);  // 10000 milliseconds = 10 seconds before reverting grass
         }
     });
+}
+
+function triggerPokemonEncounter(pokemonImage) {
+    // Start with the white flash effect
+    const flashOverlay = document.getElementById('flash-overlay');
+    const encounterScreen = document.getElementById('encounter-screen');
+    const encounterPokemon = document.getElementById('encounter-pokemon');
+    const textBubble = document.getElementById('text-bubble');
+    const textBubbleContent = textBubble.querySelector('p');
+
+    flashOverlay.classList.remove('hidden');
+    flashOverlay.style.animation = 'flash 0.5s ease-in-out 4 alternate';  // Flash 4 times
+
+    setTimeout(() => {
+        flashOverlay.classList.add('hidden');
+        flashOverlay.style.animation = '';  // Reset the animation
+
+        // Show the encounter screen and Pokémon
+        encounterScreen.style.display = 'block';
+        encounterPokemon.style.backgroundImage = `url('${pokemonImage}')`;
+
+        // Show the text bubble with the first message
+        textBubble.style.display = 'block';
+        textBubbleContent.textContent = 'Wild Pokémon appeared!';
+
+        // Wait for the user to click to move to the next message
+        textBubble.addEventListener('click', showOptions);
+    }, 2000);  // Total duration for flashing
+}
+
+// Function to show options after the first message
+function showOptions() {
+    const textBubble = document.getElementById('text-bubble');
+    const textBubbleContent = textBubble.querySelector('p');
+
+    // Change the text content to the options
+    textBubbleContent.textContent = 'Catch?\nFeed\nRun Away';
+
+    // Optionally, remove this event listener if you want to disable further clicks
+    textBubble.removeEventListener('click', showOptions);
 }

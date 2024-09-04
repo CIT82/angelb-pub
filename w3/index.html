@@ -1,18 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pokémon Safari Simulator</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1></h1>
-        <div id="safari-container">
-            <div id="player-sprite"></div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Safari Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1></h1>
+    <div id="safari-container">
+        <!-- Player sprite -->
+        <div id="player-sprite"></div>
+        
+        <!-- Placeholder for the Pokémon that will appear -->
+        <div id="pokemon" class="hidden"></div>
+    </div>
+    <script src="script.js"></script>
+
+     <!-- White screen overlay for flashing effect -->
+     <div id="flash-overlay" class="hidden"></div>
+
+     <!-- Encounter screen -->
+     <div id="encounter-screen" class="hidden">
+         <div id="encounter-pokemon"></div>
+     </div>
+ 
+     <div id="text-bubble">
+        <p>Wild Pokémon appeared!</p>
+        <div id="text-bubble-background"></div>
+        <div id="text-bubble-frame"></div>
         </div>
-        <script src="script.js"></script>
-    </body>
-    </html>
+</body>
+</html>

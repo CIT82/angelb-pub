@@ -50,6 +50,137 @@ html, body {
 }
 
 @keyframes grassAnimateOut {
-    from { background-image: url('Shinygrass.png'); }
-    to { background-image: url('Grass.png'); }
+    from { background-image: url('images/Shinygrass.png'); }
+    to { background-image: url('images/Grass.png'); }
+}
+
+#pokemon {
+    position: absolute;
+    width: 64px;  /* Adjust based on Pokémon sprite size */
+    height: 64px; /* Adjust based on Pokémon sprite size */
+    background-image: url('images/Inky.gif');  /* Placeholder */
+    background-size: cover;
+   display: none; 
+}
+
+.hidden {
+    display: none;
+}
+
+.shown {
+    display: block;
+    animation: pokemonPopUp 0.5s ease-in-out forwards;
+}
+
+@keyframes pokemonPopUp {
+    from { transform: scale(0); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Flash overlay for the white screen effect */
+#flash-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 100;  /* On top of everything */
+    opacity: 0;  /* Initially invisible */
+    pointer-events: none;  /* Ignore clicks */
+}
+
+@keyframes flash {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+/* Encounter screen background */
+#encounter-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/Encounterfield.png'); /* Replace with actual path */
+    background-size: cover;
+    z-index: 90;  /* Below the flash but above the game screen */
+    display: none;
+}
+
+#encounter-pokemon {
+    position: absolute;
+    top: 45%;  /* Adjust to center vertically */
+    left: 50%;  /* Center horizontally */
+    transform: translate(-50%, -50%);  /* Ensure it stays centered */
+    width: 300px;  /* Adjust size */
+    height: 300px; /* Adjust height proportionally */
+    background-size: contain;  /* Ensure the Pokémon is fully visible */
+    background-repeat: no-repeat;  /* Prevent repeating the image */
+}
+
+
+
+@font-face {
+    font-family: 'Wayfarer';
+    src: url('fonts/Wayfarer.ttf') format('truetype');
+}
+/* Text bubble */
+
+
+/* Text bubble */
+#text-bubble {
+    position: absolute;
+    bottom: 20px;  /* Positioned near the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 600px;  /* Maximum width for the text box */
+    height: 120px;  /* Adjust height to better fit the frame */
+    z-index: 95;  /* On top of the encounter screen */
+    display: none;  /* Hidden by default, shown via JavaScript */
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+#text-bubble-background {
+    background-color: rgba(255, 255, 255, 0.8);  /* White background */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;  /* Optional: Add rounded corners */
+    padding: 10px;  /* Adjust padding for a better fit */
+    box-sizing: border-box;
+}
+
+#text-bubble-frame {
+    position: absolute;
+    bottom: 10%;
+    width: 110%;
+    height: 100%;
+    background-image: url('images/Textbox.png');  /* Your frame image */
+    background-size: 100% 100%;  /* Stretch to fit container */
+    background-repeat: no-repeat;
+    pointer-events: none;  /* Ensure it's not interactive */
+}
+
+#text-bubble p {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;  /* Adjust font size */
+    font-family: 'Wayfarer', sans-serif;  /* Custom font */
+}
+
+/* Visibility class for the text box */
+#text-bubble.shown {
+    display: flex;  /* Show the text bubble */
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
