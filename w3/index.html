@@ -14,7 +14,7 @@
 
     <!-- Gameboy Background -->
     <div class="center-content">
-        <img class="gba-background" src="images/gboy.png" alt="GBA Background">
+        <img class="gba-background" src="images\gboy.png" alt="GBA Background">
         <div id="safari-container">
             <!-- Player sprite -->
             <div id="player-sprite"></div>
@@ -43,10 +43,10 @@
     <div id="pokeball" class="hidden"></div>
 
     <!-- Chibi Pokémon Corners -->
-    <img src="images/ChibiPoke.png" alt="Chibi Pokémon" class="chibi-pokemon chibi-top-left">
-    <img src="images/ChibiPoke.png" alt="Chibi Pokémon" class="chibi-pokemon chibi-top-right">
-    <img src="images/ChibiPoke.png" alt="Chibi Pokémon" class="chibi-pokemon chibi-bottom-left">
-    <img src="images/ChibiPoke.png" alt="Chibi Pokémon" class="chibi-pokemon chibi-bottom-right">
+    <img src="images\ChibiPoke.png" alt="Chibi Pokémon" class="chibi-pokemon chibi-top-left">
+    <img src="images\ChibiPoke.png" alt="Chibi Pokémon" class="chibi-pokemon chibi-top-right">
+    <img src="images\ChibiPoke.png" alt="Chibi Pokémon" class="chibi-pokemon chibi-bottom-left">
+    <img src="images\ChibiPoke.png" alt="Chibi Pokémon" class="chibi-pokemon chibi-bottom-right">
 
     <!-- Add the grass images as patches directly -->
     <script>
@@ -59,7 +59,7 @@
             for (let i = 0; i < numberOfPatches; i++) {
                 const patch = document.createElement('div');
                 patch.classList.add('grass-patch');
-                patch.style.backgroundImage = "url('images/Pokegrass.png')";  // Ensure correct path for the grass
+                patch.style.backgroundImage = "url('images\Pokegrass.png')";  // Ensure correct path for the grass
                 patch.style.width = `${grassPatchSize}px`;
                 patch.style.height = `${grassPatchSize}px`;
                 patch.style.position = "absolute";

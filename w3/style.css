@@ -27,7 +27,7 @@ html, body {
     width: 500px;
     height: 500px;
     z-index: 5;
-    background-image: url('images/Pokegrass.png');
+    background-image: url('images\Pokegrass.png');
     background-size: cover;
     overflow: hidden;
 }
@@ -35,7 +35,7 @@ html, body {
 #player-sprite {
     width: 32px;
     height: 48px;
-    background: url('images/Trainer.png') no-repeat;
+    background: url('images\Trainer.png') no-repeat;
     position: absolute;
     z-index: 10;
     top: 200px;
@@ -45,21 +45,21 @@ html, body {
 .grass-patch {
     width: 32px;
     height: 32px;
-    background-image: url('images/Grass.png');
+    background-image: url('images\Grass.png');
     background-size: cover;
     position: absolute;
     z-index: 4;
 }
 
 .shiny-grass {
-    background-image: url('images/Shinygrass.png');
+    background-image: url('images\Shinygrass.png');
     animation: grassAnimate 0.5s steps(4) forwards;
     z-index: 9;
 }
 
 @keyframes grassAnimate {
-    from { background-image: url('images/Grass.png'); }
-    to { background-image: url('images/Shinygrass.png'); }
+    from { background-image: url('images\Grass.png'); }
+    to { background-image: url('images\Shinygrass.png'); }
 }
 
 @font-face {
