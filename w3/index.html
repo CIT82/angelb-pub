@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1></h1>
+ 
     <div id="safari-container">
         <!-- Player sprite -->
         <div id="player-sprite"></div>
@@ -15,20 +15,40 @@
         <!-- Placeholder for the Pokémon that will appear -->
         <div id="pokemon" class="hidden"></div>
     </div>
-    <script src="script.js"></script>
 
-     <!-- White screen overlay for flashing effect -->
-     <div id="flash-overlay" class="hidden"></div>
+    <!-- White screen overlay for flashing effect -->
+    <div id="flash-overlay" class="hidden"></div>
 
-     <!-- Encounter screen -->
-     <div id="encounter-screen" class="hidden">
-         <div id="encounter-pokemon"></div>
-     </div>
+    <!-- Encounter screen -->
+    <div id="encounter-screen" class="hidden">
+        <div id="encounter-pokemon"></div>
+    </div>
  
-     <div id="text-bubble">
-        <p>Wild Pokémon appeared!</p>
+    <!-- Text bubble -->
+    <div id="text-bubble">
         <div id="text-bubble-background"></div>
         <div id="text-bubble-frame"></div>
+        <p>Wild Pokémon appeared!</p>
+    </div>
+
+      <!-- Placeholder for Pokeball -->
+      <div id="pokeball" class="hidden"></div>
+    </div>
+
+
+    <div class="center-content">
+        <!-- GBA Image Background -->
+        <img class="gba-background" src="images/gboy.png" alt="GBA Background">
         </div>
+    </div>
+
+
+    <img src="images/ChibiPoke.png" alt="Chibi Pokémon" class="chibi-pokemon chibi-top-left">
+<img src="images/ChibiPoke.png" alt="Chibi Pokémon" class="chibi-pokemon chibi-top-right">
+<img src="images/ChibiPoke.png" alt="Chibi Pokémon" class="chibi-pokemon chibi-bottom-left">
+<img src="images/ChibiPoke.png" alt="Chibi Pokémon" class="chibi-pokemon chibi-bottom-right">
+
+
+    <script src="script.js"></script>
 </body>
 </html>
