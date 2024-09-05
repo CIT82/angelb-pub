@@ -1,5 +1,4 @@
 /* Background for the entire page */
-@import url('https://fonts.cdnfonts.com/css/pokemon-solid');
 
 html, body {
     height: 100%;
@@ -24,7 +23,7 @@ html, body {
 .gba-background {
     position: absolute;
     top: 685px;
-    left: -250px;
+    left: 200px;
     transform: translate(-50%, -50%);
     width: 1000px;
     height: 900px; /* Maintain aspect ratio */
@@ -36,8 +35,10 @@ html, body {
     position: relative;
     width: 500px;
     height: 500px;
+    z-index: 0;
     background-image: url('images/Pokegrass.png');
     background-size: cover;
+    overflow: hidden;
 }
 
 /* Chibi Pokémon image for the corners */
@@ -126,6 +127,7 @@ html, body {
 .shiny-grass {
     background-image: url('images/Shinygrass.png');
     animation: grassAnimate 0.5s steps(4) forwards;
+    z-index: 1;
 }
 
 @keyframes grassAnimate {

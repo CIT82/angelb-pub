@@ -5,14 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokécatch</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Include the Pokémon Solid font -->
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/pokemon-solid');
+    </style>
 </head>
 <body>
-    <div id="safari-container">
-        <!-- Player sprite -->
-        <div id="player-sprite"></div>
-        
-        <!-- Placeholder for the Pokémon that will appear -->
-        <div id="pokemon" class="hidden"></div>
+
+    <!-- Gameboy Background -->
+    <div class="center-content">
+        <img class="gba-background" src="images/gboy.png" alt="GBA Background">
+        <div id="safari-container">
+            <!-- Player sprite -->
+            <div id="player-sprite"></div>
+            
+            <!-- Placeholder for the Pokémon that will appear -->
+            <div id="pokemon" class="hidden"></div>
+        </div>
     </div>
 
     <!-- White screen overlay for flashing effect -->
@@ -22,7 +31,7 @@
     <div id="encounter-screen" class="hidden">
         <div id="encounter-pokemon"></div>
     </div>
- 
+
     <!-- Text bubble -->
     <div id="text-bubble">
         <div id="text-bubble-background"></div>
@@ -30,24 +39,38 @@
         <p>Wild Pokémon appeared!</p>
     </div>
 
-      <!-- Placeholder for Pokeball -->
-      <div id="pokeball" class="hidden"></div>
-    </div>
+    <!-- Placeholder for Pokeball -->
+    <div id="pokeball" class="hidden"></div>
 
-
-    <div class="center-content">
-        <!-- GBA Image Background -->
-        <img class="gba-background" src="images/gboy.png" alt="GBA Background">
-        </div>
-    </div>
-
-
+    <!-- Chibi Pokémon Corners -->
     <img src="images/ChibiPoke.png" alt="Chibi Pokémon" class="chibi-pokemon chibi-top-left">
-<img src="images/ChibiPoke.png" alt="Chibi Pokémon" class="chibi-pokemon chibi-top-right">
-<img src="images/ChibiPoke.png" alt="Chibi Pokémon" class="chibi-pokemon chibi-bottom-left">
-<img src="images/ChibiPoke.png" alt="Chibi Pokémon" class="chibi-pokemon chibi-bottom-right">
+    <img src="images/ChibiPoke.png" alt="Chibi Pokémon" class="chibi-pokemon chibi-top-right">
+    <img src="images/ChibiPoke.png" alt="Chibi Pokémon" class="chibi-pokemon chibi-bottom-left">
+    <img src="images/ChibiPoke.png" alt="Chibi Pokémon" class="chibi-pokemon chibi-bottom-right">
 
+    <!-- Add the grass images as patches directly -->
+    <script>
+        // JavaScript to add grass patches dynamically
+        document.addEventListener("DOMContentLoaded", () => {
+            const safariContainer = document.getElementById('safari-container');
+            const grassPatchSize = 32; // size of each grass patch
+            const numberOfPatches = 20; // number of grass patches to display
+            
+            for (let i = 0; i < numberOfPatches; i++) {
+                const patch = document.createElement('div');
+                patch.classList.add('grass-patch');
+                patch.style.backgroundImage = "url('images/Pokegrass.png')";  // Ensure correct path for the grass
+                patch.style.width = `${grassPatchSize}px`;
+                patch.style.height = `${grassPatchSize}px`;
+                patch.style.position = "absolute";
+                patch.style.left = `${Math.random() * (safariContainer.offsetWidth - grassPatchSize)}px`;
+                patch.style.top = `${Math.random() * (safariContainer.offsetHeight - grassPatchSize)}px`;
+                safariContainer.appendChild(patch);
+            }
+        });
+    </script>
 
+    <!-- JavaScript File -->
     <script src="script.js"></script>
 </body>
 </html>
