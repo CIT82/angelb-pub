@@ -9,15 +9,6 @@ html, body {
     justify-content: center;
     align-items: center;
 }
-#player-sprite {
-    width: 32px;
-    height: 48px;
-    background: url('images/Trainer.png') no-repeat;
-    position: absolute;
-    z-index: 10;
-    top: 200px;
-    left: 200px;
-}
 
 /* GBA Background */
 .gba-background {
@@ -35,11 +26,47 @@ html, body {
     position: relative;
     width: 500px;
     height: 500px;
-    z-index: 0;
+    z-index: 2;
     background-image: url('images/Pokegrass.png');
     background-size: cover;
     overflow: hidden;
 }
+
+#player-sprite {
+    width: 32px;
+    height: 48px;
+    background: url('images/Trainer.png') no-repeat;
+    position: absolute;
+    z-index: 10;
+    top: 200px;
+    left: 200px;
+}
+
+.grass-patch {
+    width: 32px;
+    height: 32px;
+    background-image: url('images/Grass.png');
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+}
+
+.shiny-grass {
+    background-image: url('images/Shinygrass.png');
+    animation: grassAnimate 0.5s steps(4) forwards;
+    z-index: 1;
+}
+
+@keyframes grassAnimate {
+    from { background-image: url('images/Grass.png'); }
+    to { background-image: url('images/Shinygrass.png'); }
+}
+
+@font-face {
+    font-family: 'Wayfarer';
+    src: url('fonts/Wayfarer.ttf') format('truetype');
+}
+
 
 /* Chibi Pokémon image for the corners */
 .chibi-pokemon {
@@ -115,30 +142,6 @@ html, body {
     height: 100vh; /* Full viewport height */
 }
 
-.grass-patch {
-    width: 32px;
-    height: 32px;
-    background-image: url('images/Grass.png');
-    background-size: cover;
-    position: absolute;
-    z-index: 1;
-}
-
-.shiny-grass {
-    background-image: url('images/Shinygrass.png');
-    animation: grassAnimate 0.5s steps(4) forwards;
-    z-index: 1;
-}
-
-@keyframes grassAnimate {
-    from { background-image: url('images/Grass.png'); }
-    to { background-image: url('images/Shinygrass.png'); }
-}
-
-@font-face {
-    font-family: 'Wayfarer';
-    src: url('fonts/Wayfarer.ttf') format('truetype');
-}
 
 #text-bubble {
     position: absolute;
