@@ -48,13 +48,13 @@ html, body {
     background-image: url('images/Grass.png');
     background-size: cover;
     position: absolute;
-    z-index: 7;
+    z-index: 9;
 }
 
 .shiny-grass {
     background-image: url('images/Shinygrass.png');
     animation: grassAnimate 0.5s steps(4) forwards;
-    z-index: 1;
+    z-index: 9;
 }
 
 @keyframes grassAnimate {
