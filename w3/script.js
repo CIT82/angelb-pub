@@ -45,7 +45,7 @@ const numPatches = 20; // Number of grass patches to scatter
 for (let i = 0; i < numPatches; i++) {
     const patch = document.createElement('div');
     patch.classList.add('grass-patch');
-    patch.style.backgroundImage = "url('images\Grass.png')";  // Default grass image
+    patch.style.backgroundImage = "url('images/Grass.png')";  // Default grass image
 
     // Randomize position
     const randomLeft = Math.random() * (containerWidth - patchSize);
@@ -191,7 +191,7 @@ function startMovement(direction) {
             if (isPlayerInGrass()) {
                 stepsInGrass++;
                 if (!pokemonAppeared && stepsInGrass >= 5 && Math.random() < encounterChance) {
-                    triggerPokemonEncounter('images\Inky.gif');
+                    triggerPokemonEncounter('images/Inky.gif');
                     pokemonAppeared = true;
                 }
             } else {
@@ -230,14 +230,14 @@ function handleGrassAnimation() {
             // Only have a chance of encountering a Pokémon if we're in the "spawned" patch
             if (patch === pokemonSpawnedInPatch && Math.random() < encounterChance) {
                 if (!pokemonAppeared) {
-                    triggerPokemonEncounter('images\Inky.gif');
+                    triggerPokemonEncounter('images/Inky.gif');
                     pokemonAppeared = true;
                 }
             } else {
                 // Normal grass animation if no Pokémon encountered
-                patch.style.backgroundImage = "url('images\Shinygrass.png')";
+                patch.style.backgroundImage = "url('images/Shinygrass.png')";
                 setTimeout(() => {
-                    patch.style.backgroundImage = "url('images\Grass.png')";
+                    patch.style.backgroundImage = "url('images/Grass.png')";
                 }, 1000);
             }
 
@@ -318,7 +318,7 @@ function handleCatch() {
     pokeball.style.top = '85%';
     pokeball.style.width = '50px';
     pokeball.style.height = '50px';
-    pokeball.style.backgroundImage = "url('images\Pokeball.png')";
+    pokeball.style.backgroundImage = "url('images/Pokeball.png')";
     pokeball.style.backgroundSize = 'contain';
     pokeball.style.backgroundRepeat = 'no-repeat';
     pokeball.style.cursor = 'pointer';
