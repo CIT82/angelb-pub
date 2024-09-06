@@ -24,8 +24,8 @@ html, body {
 
 #safari-container {
     position: relative;
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 350px;
     z-index: 1;
     background-image: url('images/Pokegrass.png');
     background-size: cover;
