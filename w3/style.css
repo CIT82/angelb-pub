@@ -48,7 +48,7 @@ html, body {
     background-image: url('images/Grass.png');
     background-size: cover;
     position: absolute;
-    z-index: 4;
+    z-index: 2;
 }
 
 .shiny-grass {
