@@ -1,0 +1,41 @@
+/* Ensure the body and html take up the full height of the viewport */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    flex-direction: column;  /* Stack elements vertically */
+    text-align: center;      /* Center text inside the flex container */
+}
+
+/* Spacing between the heading and the button */
+h1 {
+    margin-bottom: 20px;
+}
+
+/* Button styling */
+button {
+    padding: 10px 20px;
+    font-size: 16px; /* Default font size for medium screens */
+    width: auto;     /* Let the button width be dynamic based on content */
+    white-space: nowrap; /* Prevent text from wrapping */
+    transition: font-size 0.2s ease; /* Smooth transitions when resizing */
+}
+
+/* Small screens: Adjust the button text size */
+@media (max-width: 576px) {
+    button {
+        font-size: 14px; /* Slightly smaller font for small screens */
+        padding: 8px 16px; /* Adjust padding for smaller screens */
+    }
+}
+
+/* Large screens: Adjust the button text size */
+@media (min-width: 1200px) {
+    button {
+        font-size: 18px; /* Increase font size for larger screens */
+        padding: 12px 24px; /* Adjust padding for larger screens */
+    }
+}
