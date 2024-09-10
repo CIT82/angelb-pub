@@ -11,19 +11,20 @@
   </head>
   <body>
 
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-6 text-center">
-          <h1>THE BUTTON</h1>
-          <button type="button" class="btn btn-info" onclick="showMessage()">Press Me!</button>
-
-          <!-- Message -->
-          <p id="message" class="mt-3" style="display:none;">The element I found interesting to implement was the button!! I chose Buttons because they are fundamental elements in any web interface, serving as interactive components for users to submit forms, trigger actions, or navigate within a website or app. Bootstrap provides an easy and flexible way to style buttons, offering multiple built-in classes for different colors, sizes, and states, which makes it quick to customize and integrate into any project.</p>
-        </div>
+    <div class="custom-container">
+      <h1>THE BUTTON</h1>
+      
+      <!-- Button Image Container -->
+      <div class="button-container">
+        <img src="images/THEBLUEBUTTON.png" alt="Blue Button" class="blue-button-img">
+        <button type="button" class="btn btn-info" id="showMessageButton">Press Me!</button>
       </div>
+
+      <!-- Message -->
+      <p id="message" class="mt-3" style="display:none;">The element I found interesting to implement was the button!! I chose Buttons because they are fundamental elements in any web interface, serving as interactive components for users to submit forms, trigger actions, or navigate within a website or app. Bootstrap provides an easy and flexible way to style buttons, offering multiple built-in classes for different colors, sizes, and states, which makes it quick to customize and integrate into any project.</p>
     </div>
 
-    <!-- Link to JavaScript file (moved to the bottom) -->
+    <!-- Link to JavaScript file -->
     <script src="script.js"></script>
   </body>
 </html>

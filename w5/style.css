@@ -4,23 +4,52 @@ html, body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center;     /* Center vertically */
-    flex-direction: column;  /* Stack elements vertically */
-    text-align: center;      /* Center text inside the flex container */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
 }
 
-/* Spacing between the heading and the button */
-h1 {
-    margin-bottom: 20px;
+/* Custom container for width control */
+.custom-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-/* Button styling */
+/* Button container: relative positioning to allow button to be placed over image */
+.button-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Image Styling */
+.blue-button-img {
+    max-width: 100%; /* Scale the image to fit the container */
+    height: auto;
+}
+
+/* Button Styling: Positioned over the image */
 button {
+    position: absolute;
+    top: 42%;
+    left: 52%;
+    transform: translate(-50%, -50%); /* Center the button on the image */
     padding: 10px 20px;
-    font-size: 16px; /* Default font size for medium screens */
-    width: auto;     /* Let the button width be dynamic based on content */
-    white-space: nowrap; /* Prevent text from wrapping */
-    transition: font-size 0.2s ease; /* Smooth transitions when resizing */
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, 0.6); /* Optional: Semi-transparent background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    z-index: 1; /* Ensure button is on top of the image */
 }
 
+/* Message text styling */
+#message {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #f0f0f0;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
