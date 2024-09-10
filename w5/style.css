@@ -24,18 +24,3 @@ button {
     transition: font-size 0.2s ease; /* Smooth transitions when resizing */
 }
 
-/* Small screens: Adjust the button text size */
-@media (max-width: 576px) {
-    button {
-        font-size: 14px; /* Slightly smaller font for small screens */
-        padding: 8px 16px; /* Adjust padding for smaller screens */
-    }
-}
-
-/* Large screens: Adjust the button text size */
-@media (min-width: 1200px) {
-    button {
-        font-size: 18px; /* Increase font size for larger screens */
-        padding: 12px 24px; /* Adjust padding for larger screens */
-    }
-}
