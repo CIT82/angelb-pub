@@ -1,3 +1,26 @@
+@font-face {
+    font-family: 'Mantinia'; /* Change 'Mantinia' to the actual font name if different */
+    src: url('Mantinia Regular.otf') format('woff'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'QESTERO';
+    src: url('QESTERO-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    font-family: 'Mantinia', sans-serif;
+}
+
+p {
+    font-family: 'QESTERO', sans-serif;
+}
+
 
 /*** Spinner Start ***/
 /*** Spinner ***/
