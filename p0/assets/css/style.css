@@ -13,6 +13,16 @@
     font-style: normal;
 }
 
+.navbar-nav.ms-auto .nav-link {
+    font-family: 'QESTERO', serif;
+    color: rgb(78, 73, 42); /* Example text color */
+}
+
+.navbar-nav.ms-auto .dropdown-menu a {
+    font-family: 'QESTERO', serif;
+    color: rgb(78, 73, 42);
+}
+
 .navbar-brand h1 {
     color: rgb(153, 142, 82) !important;
     font-family: 'Mantinia', sans-serif;
