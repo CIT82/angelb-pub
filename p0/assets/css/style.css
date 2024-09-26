@@ -365,7 +365,7 @@ body {
 @media (max-width: 991.98px) {
     .sticky-top.navbar-light {
         position: relative;
-        background: rgb(43, 39, 23);
+        background: var(--bs-white);
     }
 
     .navbar.navbar-expand-lg .navbar-toggler {
@@ -383,7 +383,7 @@ body {
     .sticky-top.navbar-light .navbar-nav .nav-link {
         padding: 10px 0;
         margin-left: 0;
-        color: rgb(43, 39, 23);;
+        color: var(--bs-dark);
     }
 
     .navbar-light .navbar-brand img {
