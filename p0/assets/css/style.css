@@ -9,7 +9,11 @@
     font-family: 'QESTERO';
     src: url('QESTERO-Regular.ttf') format('truetype');
     font-weight: normal;
-    font-style: normal;.navbar-light {
+    font-style: normal;
+}
+
+/* Navbar styling */
+.navbar-light {
     position: absolute;
     width: 100%;
     top: 0;
@@ -73,7 +77,7 @@
 
 .navbar .nav-item:hover .dropdown-menu,
 .dropdown .dropdown-menu a:hover {
-    background: rgb(85, 79, 48) !important;
+    background: rgb(37, 35, 20) !important;
     color: rgb(228, 210, 124) !important;
     visibility: visible;
     transition: .5s;
@@ -129,7 +133,7 @@
         height: 2px;
         bottom: -1px;
         left: 50%;
-        background: rgb(78, 73, 42); 
+        background: rgb(37, 36, 28); 
         transition: .5s;
     }
 
@@ -137,7 +141,7 @@
     .navbar-light .navbar-nav .nav-item.active::before {
         width: calc(100% - 2px);
         left: 1px;
-        background: rgb(78, 73, 42);
+        background: rgb(37, 36, 28);
     }
 
     .navbar-light .navbar-nav .nav-item::after {
@@ -161,7 +165,6 @@
     .navbar-light .navbar-nav .nav-link.nav-contact::before {
         display: none;
     }
-}
 }
 
 .navbar-nav.ms-auto .nav-link {
@@ -219,8 +222,6 @@ p {
 body {
     background-color: gray;
 }
-
-
 
 
 /*** Spinner Start ***/
@@ -417,7 +418,7 @@ body {
 
     .sticky-top.navbar-light {
         position: fixed;
-        background: rgb(43, 39, 23) !important; /* Ensure consistent background when sticky */
+        background: rgb(14, 13, 5) !important; /* NAV BACKGROUND */
         border: none;
     }
 
@@ -428,7 +429,7 @@ body {
         height: 2px;
         bottom: -1px;
         left: 50%;
-        background: rgb(78, 73, 42); 
+        background: rgb(145, 139, 101); /* Toggle menu nav */
         transition: .5s;
     }
 
@@ -443,7 +444,7 @@ body {
         left: 50%;
         transform: translateX(-50%);
         border: 10px solid;
-        border-color: transparent transparent rgb(78, 73, 42) transparent;
+        border-color: transparent transparent rgb(145, 139, 101) transparent; /* Toggle menu nav */
         opacity: 0;
         transition: 0.5s;
     }
@@ -1118,5 +1119,3 @@ body {
     background: var(--bs-dark);
 }
 /*** copyright end ***/
-
-
