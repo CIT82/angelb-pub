@@ -362,10 +362,11 @@ body {
     opacity: 1;
 }
 
+/* Mobile-specific navbar background */
 @media (max-width: 991.98px) {
     .sticky-top.navbar-light {
         position: relative;
-        background: var(--bs-white);
+        background: transparent !important; /* Mobile version remains transparent */
     }
 
     .navbar.navbar-expand-lg .navbar-toggler {
@@ -391,6 +392,7 @@ body {
     }
 }
 
+/* General navbar styling for larger screens */
 @media (min-width: 992px) {
     .navbar .nav-item .dropdown-menu {
         display: block;
@@ -412,89 +414,10 @@ body {
         border-bottom: 1px dotted;
         z-index: 999;
     }
-    
+
     .sticky-top.navbar-light {
         position: fixed;
-        background: rgb(43, 39, 23);
-        border: none;
-    }
-
-    .navbar-light .navbar-nav .nav-item::before {
-        position: absolute;
-        content: "";
-        width: 0;
-        height: 2px;
-        bottom: -1px;
-        left: 50%;
-        background: rgb(78, 73, 42); 
-        transition: .5s;
-    }
-
-    .sticky-top.navbar-light .navbar-nav .nav-item::before {
-        bottom: 0;
-    }
-
-    .navbar-light .navbar-nav .nav-item::after {
-        content: "";
-        position: absolute;
-        bottom: 1px;
-        left: 50%;
-        transform: translateX(-50%);
-        border: 10px solid;
-        border-color: transparent transparent rgb(78, 73, 42) transparent;
-        opacity: 0;
-        transition: 0.5s;
-    }
-
-    .navbar-light .navbar-nav .nav-item:hover::after,
-    .navbar-light .navbar-nav .nav-item.active::after {
-        bottom: 1px;
-        opacity: 1;
-    }
-
-    .navbar-light .navbar-nav .nav-item:hover::before,
-    .navbar-light .navbar-nav .nav-item.active::before {
-        width: calc(100% - 2px);
-        left: 1px;
-        background: rgb(78, 73, 42);
-    }
-
-    .navbar-light .navbar-nav .nav-link.nav-contact::before {
-        display: none;
-    }
-}
-
-
-
-@media (min-width: 992px) {
-    .navbar .nav-item .dropdown-menu {
-        display: block;
-        visibility: hidden;
-        top: 100%;
-        transform: rotateX(-75deg);
-        transform-origin: 0% 0%;
-        border: 0;
-        border-radius: 10px;
-        transition: .5s;
-        opacity: 0;
-    }
-
-    .navbar-light {
-        position: absolute;
-        width: 100%;
-        top: 0;
-        left: 0;
-        border-top: 0;
-        border-right: 0;
-        border-bottom: 1px solid;
-        border-left: 0;
-        border-style: dotted;
-        z-index: 999;
-    }
-    
-    .sticky-top.navbar-light {
-        position: fixed;
-        background: rgb(17, 16, 13);
+        background: rgb(43, 39, 23) !important; /* Ensure consistent background when sticky */
         border: none;
     }
 
