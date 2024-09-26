@@ -34,7 +34,7 @@
 
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
         </div>
@@ -44,7 +44,7 @@
         <div class="container-fluid position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
                 <a href="" class="navbar-brand p-0">
-                    <h1 class="text-primary"><img src="assets/img/goldenorder.png" alt="Ring" class="custom-icon" /></i>The Elden Ring</h1>
+                    <h1 class="text"><img src="assets/img/goldenorder.png" alt="Ring" class="custom-icon" /></i>The Elden Ring</h1>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
@@ -159,9 +159,32 @@
         <div class="container-fluid feature py-5" style="background-color: black;">
             <div class="container py-5">
                 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                    <h4 class="text-uppercase text-primary">Our Feature</h4>
-                    <h1 class="display-3 text-capitalize mb-3">A Trusted Name In Bottled Water Industry</h1>
+                    <h4 class="text-uppercase">The Golden Order</h4>
+                    <h1 class="display-3 text-capitalize mb-3">Queen Marika And The Golden Order</h1>
                 </div>
+
+                <div id="paragraphCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <p>Marika the Eternal, divine and yet troubled, served as the vessel for the Elden Ring...</p>
+                      </div>
+                      <div class="carousel-item">
+                        <p>For all her grand purpose, Marika did falter. Bound by the strict laws of the Golden Order...</p>
+                      </div>
+                    </div>
+                    
+                    <!-- Controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#paragraphCarousel" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#paragraphCarousel" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+
+
                 <div class="row g-4">
                     <div class=" col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
                         <div class="feature-item p-4">
@@ -213,7 +236,7 @@
                     </div>
                     <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.2s">
                         <div class="about-item">
-                            <h4 class="text-primary text-uppercase">About Us</h4>
+                            <h4 class="text-uppercase">About Us</h4>
                             <h1 class="display-3 mb-3">We Deliver The Quality Water.</h1>
                             <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum quidem quas totam nostrum! Maxime rerum voluptatem sed, facilis unde a aperiam nulla voluptatibus excepturi ipsam iusto consequuntur
                             </p>
@@ -317,7 +340,7 @@
         <div class="container-fluid service overflow-hidden py-5" style="background-color: black;">
             <div class="container py-5">
                 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                    <h4 class="text-uppercase text-primary">Our Service</h4>
+                    <h4 class="text-uppercase">Our Service</h4>
                     <h1 class="display-3 text-capitalize mb-3">Protect Your Family with Best Water</h1>
                 </div>
                 <div class="row gx-0 gy-4 align-items-center">
@@ -430,7 +453,7 @@
         <div class="container-fluid product py-5">
             <div class="container py-5">
                 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                    <h4 class="text-uppercase text-primary">Our Products</h4>
+                    <h4 class="text-uppercase">Our Products</h4>
                     <h1 class="display-3 text-capitalize mb-3">We Deliver Best Quality Bottle Packs.</h1>
                 </div>
                 <div class="row g-4 justify-content-center">
@@ -440,7 +463,7 @@
                             <div class="product-content bg-light text-center rounded-bottom p-4">
                                 <p>2L 1 Bottle</p>
                                 <a href="#" class="h4 d-inline-block mb-3">Mineral Water Bottle</a>
-                                <p class="fs-4 text-primary mb-3">$35:00</p>
+                                <p class="fs-4 mb-3">$35:00</p>
                                 <a href="#" class="btn btn-secondary rounded-pill py-2 px-4">Read More</a>
                             </div>
                         </div>
@@ -451,7 +474,7 @@
                             <div class="product-content bg-light text-center rounded-bottom p-4">
                                 <p>4L 2 Bottles</p>
                                 <a href="#" class="h4 d-inline-block mb-3">RO Water Bottle</a>
-                                <p class="fs-4 text-primary mb-3">$70:00</p>
+                                <p class="fs-4 mb-3">$70:00</p>
                                 <a href="#" class="btn btn-secondary rounded-pill py-2 px-4">Read More</a>
                             </div>
                         </div>
@@ -462,7 +485,7 @@
                             <div class="product-content bg-light text-center rounded-bottom p-4">
                                 <p>6L 3 Bottles</p>
                                 <a href="#" class="h4 d-inline-block mb-3">UV Water Bottle</a>
-                                <p class="fs-4 text-primary mb-3">$100:00</p>
+                                <p class="fs-4 mb-3">$100:00</p>
                                 <a href="#" class="btn btn-secondary rounded-pill py-2 px-4">Read More</a>
                             </div>
                         </div>
@@ -477,7 +500,7 @@
         <div class="container-fluid blog pb-5" style="background-color: black;">
             <div class="container pb-5">
                 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                    <h4 class="text-uppercase text-primary">Our Blog</h4>
+                    <h4 class="text-uppercase">Our Blog</h4>
                     <h1 class="display-3 text-capitalize mb-3">Latest Blog & News</h1>
                 </div>
                 <div class="row g-4 justify-content-center">
@@ -530,7 +553,7 @@
         <div class="container-fluid team pb-5" style="background-color: black;">
             <div class="container pb-5">
                 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                    <h4 class="text-uppercase text-primary">Our Team</h4>
+                    <h4 class="text-uppercase">Our Team</h4>
                     <h1 class="display-3 text-capitalize mb-3">What is Really seo & How Can I Use It?</h1>
                 </div>
                 <div class="row g-4">
@@ -631,7 +654,7 @@
         <div class="container-fluid testimonial pb-5" style="background-color: black;">
             <div class="container pb-5">
                 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                    <h4 class="text-uppercase text-primary">Testimonials</h4>
+                    <h4 class="text-uppercase">Testimonials</h4>
                     <h1 class="display-3 text-capitalize mb-3">Our clients reviews.</h1>
                 </div>
                 <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.3s">
@@ -735,7 +758,7 @@
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
                             <div class="footer-item">
-                                <h3 class="text-white mb-4"><i class="fas fa-hand-holding-water text-primary me-3"></i>Acuas</h3>
+                                <h3 class="text-white mb-4"><i class="fas fa-hand-holding-water me-3"></i>Acuas</h3>
                                 <p class="mb-3">Dolor amet sit justo amet elitr clita ipsum elitr est.Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit.</p>
                             </div>
                             <div class="position-relative">

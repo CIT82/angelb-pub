@@ -12,6 +12,16 @@
     font-style: normal;
 }
 
+h1 {
+    font-family: 'Mantinia', serif;
+    color: rgb(136, 126, 71) !important;
+}
+
+ h4 {
+    font-family: 'Mantinia', serif;
+    color: rgb(119, 112, 69) !important;
+}
+
 /* Navbar styling */
 .navbar-light {
     position: absolute;
@@ -222,6 +232,36 @@ p {
 body {
     background-color: gray;
 }
+
+
+
+
+#paragraphCarousel .carousel-item {
+    display: none; /* Hide all items by default */
+    justify-content: center;
+    align-items: center;
+    height: auto; /* Let the height adjust based on content */
+    padding: 20px;
+    text-align: center; /* Center the text horizontally */
+}
+
+#paragraphCarousel .carousel-item.active {
+    display: flex; /* Show only the active carousel item */
+}
+
+#paragraphCarousel p {
+    font-size: 1.5rem; /* Font size for readability */
+    max-width: 700px; /* Limit paragraph width */
+    margin: 0 auto; /* Center the paragraph */
+    color: rgb(180, 172, 125) !important;
+    line-height: 1.8; /* Line height for better readability */
+    word-wrap: break-word; /* Prevent text from overflowing */
+    overflow-wrap: break-word; /* Break long words */
+}
+
+
+
+
 
 
 /*** Spinner Start ***/
