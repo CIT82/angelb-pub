@@ -1,17 +1,34 @@
 /******* Customized Bootstrap ********/
 
-$primary: #00D1F9;
-$secondary: #19409A;
-$light: #F2F9F9;
-$dark: #001442;
+$primary: rgb(153, 142, 82);
+$secondary: #343a40;
+$light: #f8f9fa;
+$dark: #212529;
 
-$font-family-base: 'Open Sans', sans-serif;
+// Font-face declarations
+@font-face {
+    font-family: 'QESTERO';
+    src: url('QESTERO-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
-$headings-font-family: "Playfair Display", serif;
+@font-face {
+    font-family: 'Mantinia';
+    src: url('Mantinia Regular.otf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
-$body-color: #808080;
+// Base font-family for the entire project
+$font-family-base: 'QESTERO', sans-serif; // Use 'QESTERO' as the base font
 
-$headings-color: $dark;
+// Headings font-family (h1, h2, h3, etc.)
+$headings-font-family: 'Mantinia', serif; // Use 'Mantinia' for headings
+
+$body-color: $primary;
+
+$headings-color: $primary;
 
 $headings-font-weight: 500;
 

@@ -13,12 +13,36 @@
     font-style: normal;
 }
 
-h1 {
+.navbar-brand h1 {
+    color: rgb(153, 142, 82) !important;
     font-family: 'Mantinia', sans-serif;
+}
+
+/* Apply gold color and custom fonts to the carousel text */
+.carousel-caption-1 h1,
+.carousel-caption-2 h1 {
+    font-family: 'Mantinia', sans-serif;
+    color: rgb(153, 142, 82) !important;
+}
+
+.carousel-caption-1 h4,
+.carousel-caption-2 h4 {
+    font-family: 'QESTERO', sans-serif;
+    color: rgb(153, 142, 82) !important;
+}
+
+/* Keep the paragraph styling the same if needed */
+.carousel-caption-1 p,
+.carousel-caption-2 p {
+    color: rgb(153, 142, 82) !important;
 }
 
 p {
     font-family: 'QESTERO', sans-serif;
+}
+
+body {
+    background-color: gray;
 }
 
 
@@ -90,11 +114,13 @@ p {
 }
 
 .btn.btn-primary {
-    color: var(--bs-white);
+    background-color: rgb(153, 142, 82) !important;
+    border-color:  rgb(153, 142, 82) !important;
+    color: #1c1c1c; /* Dark color for text */
 }
 
 .btn.btn-primary:hover {
-    background: var(--bs-secondary);
+    background: rgb(78, 73, 42) !important;
     border: 1px solid var(--bs-secondary);
 }
 
@@ -123,12 +149,12 @@ p {
 
 .sticky-top.navbar-light .navbar-nav .nav-link {
     padding: 20px 0;
-    color: var(--bs-dark);
+    color: rgb(211, 196, 111) !important;;
 }
 
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
-    color: var(--bs-primary);
+    color: rgb(153, 142, 82) !important;
 }
 
 .navbar-light .navbar-brand img {
@@ -151,13 +177,13 @@ p {
 
 .dropdown .dropdown-menu a:hover {
     background: var(--bs-primary);
-    color: var(--bs-white);
+    color: rgb(228, 210, 124) !important;;
 }
 
 .navbar .nav-item:hover .dropdown-menu {
     transform: rotateX(0deg);
     visibility: visible;
-    background: var(--bs-light);
+    background: rgb(85, 79, 48) !important;;
     transition: .5s;
     opacity: 1;
 }
@@ -170,8 +196,8 @@ p {
 
     .navbar.navbar-expand-lg .navbar-toggler {
         padding: 10px 20px;
-        border: 1px solid var(--bs-primary);
-        color: var(--bs-primary);
+        border: 1px solid rgb(153, 142, 82) !important;
+        color: rgb(153, 142, 82) !important;;
     }
 
     .navbar-light .navbar-collapse {
@@ -230,7 +256,7 @@ p {
         height: 2px;
         bottom: -1px;
         left: 50%;
-        background: var(--bs-primary);
+        background: rgb(78, 73, 42); 
         transition: .5s;
     }
 
@@ -245,7 +271,7 @@ p {
         left: 50%;
         transform: translateX(-50%);
         border: 10px solid;
-        border-color: transparent transparent var(--bs-primary) transparent;
+        border-color: transparent transparent rgb(78, 73, 42) transparent;
         opacity: 0;
         transition: 0.5s;
     }
@@ -260,13 +286,17 @@ p {
     .navbar-light .navbar-nav .nav-item.active::before {
         width: calc(100% - 2px);
         left: 1px;
+        background: rgb(78, 73, 42);
     }
 
     .navbar-light .navbar-nav .nav-link.nav-contact::before {
         display: none;
     }
 }
+
+
 /*** Carousel Hero Header Start ***/
+
 .carousel-header {
     position: relative;
     overflow: hidden;
@@ -278,7 +308,7 @@ p {
 
 .carousel .carousel-control-prev,
 .carousel .carousel-control-next {
-    width: 0;
+    outline: none !important; 
 }
 
 .carousel .carousel-control-prev .carousel-control-prev-icon,
@@ -286,43 +316,42 @@ p {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    padding: 25px 25px;
+    padding: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--bs-primary);
+    background-color: rgb(153, 142, 82) !important; 
     transition: 0.5s;
+    border-radius: 50%; 
+    box-shadow: none !important; 
+    border: none !important; 
 }
 
 .carousel .carousel-control-prev .carousel-control-prev-icon {
     left: 0;
-    border-left: 0;
-    border-top-left-radius: 0;
-    border-top-right-radius: 50px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 50px;
-
 }
 
 .carousel .carousel-control-next .carousel-control-next-icon {
     right: 0;
-    border-right: 0;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 0;
 }
 
 .carousel .carousel-control-prev .carousel-control-prev-icon:hover,
 .carousel .carousel-control-next .carousel-control-next-icon:hover {
-    background: var(--bs-secondary);
+    background: rgb(153, 142, 82) !important; 
+    filter: brightness(1.2);
+}
+
+.carousel-control-prev-icon::before,
+.carousel-control-next-icon::before {
+    color: white !important; 
+    font-size: 24px;
 }
 
 .carousel .carousel-inner .carousel-item {
     position: relative;
 }
 
-.carousel .carousel-inner .carousel-item .carousel-caption-1  {
+.carousel .carousel-inner .carousel-item .carousel-caption-1 {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -346,7 +375,7 @@ p {
     justify-content: end;
 }
 
-.carousel .carousel-inner .carousel-item .carousel-caption-2  {
+.carousel .carousel-inner .carousel-item .carousel-caption-2 {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -370,7 +399,6 @@ p {
     justify-content: start;
 }
 
-
 @media (max-width: 992px) {
     .carousel .carousel-inner .carousel-item {
         height: 700px;
@@ -381,7 +409,6 @@ p {
         height: 700px;
         object-fit: cover;
     }
-
 
     .carousel .carousel-inner .carousel-item .carousel-caption-1 {
         max-width: 100% !important;
@@ -397,7 +424,6 @@ p {
         justify-content: center;
     }
 
-
     .carousel .carousel-inner .carousel-item .carousel-caption-2 {
         max-width: 100% !important;
         justify-content: center;
@@ -412,8 +438,6 @@ p {
         justify-content: center;
     }
 
-
-
     .carousel .carousel-control-prev .carousel-control-prev-icon,
     .carousel .carousel-control-next .carousel-control-next-icon {
         display: none;
@@ -427,7 +451,8 @@ p {
 #searchModal .modal-content {
     background: rgba(255, 255, 255, .6);
 }
-/*** Carousel Hero Header End ***/
+
+/*** Carousel Hero Header End ***/ 
 
 /*** Single Page Hero Header Start ***/
 .bg-breadcrumb {
