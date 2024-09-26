@@ -5,7 +5,6 @@
     font-style: normal;
 }
 
-
 @font-face {
     font-family: 'QESTERO';
     src: url('QESTERO-Regular.ttf') format('truetype');
@@ -14,12 +13,12 @@
 }
 
 .navbar-nav.ms-auto .nav-link {
-    font-family: 'QESTERO', serif;
+    font-family: 'QESTERO', serif !important;
     color: rgb(78, 73, 42); /* Example text color */
 }
 
 .navbar-nav.ms-auto .dropdown-menu a {
-    font-family: 'QESTERO', serif;
+    font-family: 'QESTERO', serif !important;
     color: rgb(78, 73, 42);
 }
 
