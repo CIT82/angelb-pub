@@ -845,7 +845,7 @@ body {
 .bg-breadcrumb {
     position: relative;
     overflow: hidden;
-    background: url(../img/siofrarivers.png) !important;
+    background: url('../img/siofrarivers.png') !important;
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
