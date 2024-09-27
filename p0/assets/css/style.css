@@ -235,32 +235,166 @@ body {
 
 
 
+/* QUEEN MARIKA CAROUSEL */
 
+/* Basic styling for the carousel container */
+#paragraphCarousel {
+    position: relative;
+    background-color: #000000; /* Set background to black */
+    width: 900px; /* Keep the carousel wider */
+    height: 200px; /* Keep the carousel shorter */
+    margin: 100px auto 300px auto; /* Margins to center the carousel */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px; /* Horizontal padding */
+    border: transparent; /* Remove border */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    z-index: 2; /* Make sure content stays above other elements */
+}
+
+/* Add the top decorative border */
+#paragraphCarousel::before {
+    content: '';
+    position: absolute;
+    top: -250px; /* Position above the carousel */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%; /* Border width */
+    height: 690px;
+    background: url('../img/treeborder.png') no-repeat center;
+    background-size: contain;
+    filter: sepia(1) saturate(1.5) hue-rotate(12deg) brightness(0.6); /* Filter for color adjustment */
+}
+
+/* Add the bottom decorative border */
+#paragraphCarousel::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; /* Position below the carousel */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%; /* Border width */
+    height: 80px;
+    background-size: contain;
+    filter: sepia(1) saturate(1.5) hue-rotate(12deg) brightness(0.6); /* Filter for color adjustment */
+}
+
+/* Styling for the carousel text */
 #paragraphCarousel .carousel-item {
-    display: none; /* Hide all items by default */
+    display: flex; /* Hide inactive items */
     justify-content: center;
     align-items: center;
-    height: auto; /* Let the height adjust based on content */
-    padding: 20px;
-    text-align: center; /* Center the text horizontally */
+    height: 100%; /* Use full height of the container */
+    padding: 60px 80px; /* Horizontal padding */
+    text-align: center;
+    font-size: 1.4rem; /* Text size */
+    color: rgb(224, 217, 175); /* Text color */
+    opacity: 0; /* Default opacity */
+    transition: opacity 0.8s ease-in-out; /* Smooth transition */
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
 }
 
+/* Ensure the active item is visible */
 #paragraphCarousel .carousel-item.active {
-    display: flex; /* Show only the active carousel item */
+    display: flex; /* Display active items */
+    opacity: 1; /* Fully visible for active item */
 }
 
-#paragraphCarousel p {
-    font-size: 1.5rem; /* Font size for readability */
-    max-width: 700px; /* Limit paragraph width */
-    margin: 0 auto; /* Center the paragraph */
-    color: rgb(180, 172, 125) !important;
-    line-height: 1.8; /* Line height for better readability */
-    word-wrap: break-word; /* Prevent text from overflowing */
-    overflow-wrap: break-word; /* Break long words */
+/* Previous and next buttons */
+.carousel-control-prev,
+.carousel-control-next {
+    font-size: 30px;
+    color: #d4b790; /* Arrow color */
+    background: none;
+    padding: 5px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1; /* Ensure it stays on top of the border */
 }
 
+.carousel-control-prev {
+    left: 20px;
+}
 
+.carousel-control-next {
+    right: 20px;
+}
 
+/* Style the arrow icons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    border-radius: 50%;
+    background-color: #d4b790; /* Arrow background */
+    width: 30px;
+    height: 30px;
+}
+
+.carousel-control-prev-icon::before,
+.carousel-control-next-icon::before {
+    font-size: 20px;
+    color: #000000; /* Arrow icon color */
+}
+
+/* MEDIA QUERIES */
+
+/* Fix for the disappearing issue */
+@media screen and (max-width: 992px) {
+    #paragraphCarousel {
+        width: 90%;
+        height: auto;
+        margin: 100px auto;
+    }
+
+    #paragraphCarousel .carousel-item {
+        font-size: 1.2rem;
+        padding: 20px 10px;
+    }
+
+    /* Ensure buttons remain visible */
+    .carousel-control-prev, .carousel-control-next {
+        display: flex;
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #paragraphCarousel {
+        width: 100%;
+        margin: 50px auto;
+    }
+
+    #paragraphCarousel .carousel-item {
+        font-size: 1.1rem;
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #paragraphCarousel {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #paragraphCarousel .carousel-item {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    /* Ensure the buttons stay visible */
+    .carousel-control-prev, .carousel-control-next {
+        display: flex;
+        opacity: 1;
+    }
+}
+
+/* END */
 
 
 
@@ -701,13 +835,17 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background: var(--bs-white);
-    border-radius: 10px;
+    background: linear-gradient(145deg, rgb(126, 134, 129) 0%, rgb(31, 39, 33) 50%, rgba(15, 25, 20, 1) 100%);
+    border-radius: 15px;
     transition: 0.5s;
+    padding: 20px;
+    color: #e5c07b;
+    box-shadow: 0px 4px 8px rgba(8, 6, 6, 0.2);
 }
 
 .feature .feature-item:hover {
-    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+    box-shadow: 0 0 45px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(145deg, rgb(77, 97, 63) 0%, rgb(73, 90, 74) 50%, rgba(5, 20, 15, 1) 100%);
 }
 
 .feature .feature-item .feature-icon {
@@ -717,7 +855,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--bs-primary);
+    background: rgb(58, 71, 65); /* Muted green background for the icon */
 }
 
 .feature .feature-item .feature-icon i {
@@ -736,6 +874,7 @@ body {
     color: var(--bs-primary) !important;
 }
 /*** Features End ***/
+
 
 /*** About Start ***/
 .about .about-img {

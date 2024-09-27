@@ -81,5 +81,40 @@
     });
 
 
+    $(document).ready(function () {
+        // Disable automatic sliding
+        $('#paragraphCarousel').carousel({
+            interval: false, // Disable auto-slide
+            ride: false,     // Ensure no auto slide on load
+            pause: true,     // Pause when hovering
+            wrap: true       // Enable cycling between slides
+        });
+
+
+    
+        $(document).ready(function () {
+            $('#paragraphCarousel').carousel({
+                interval: false, // Disable auto-slide
+                ride: false,     // Ensure no auto-slide on load
+                pause: true,     // Pause on hover
+                wrap: true       // Enable cycling between slides
+            });
+        
+            // Handle the fade-out and fade-in when navigating between slides
+            $('#paragraphCarousel').on('slide.bs.carousel', function (e) {
+                var $activeSlide = $(e.target).find('.carousel-item.active');
+                var $nextSlide = $(e.relatedTarget);
+            
+                // Smooth transition between slides
+                $activeSlide.stop().animate({ 'opacity': 0 }, 800, function () {
+                    $activeSlide.removeClass('active').css({ 'display': 'none', 'opacity': 1 });
+                });
+            
+                $nextSlide.stop().css({ 'display': 'flex', 'opacity': 0 }).addClass('active').animate({ 'opacity': 1 }, 800);
+            });
+        });
+    });
+
+    
 })(jQuery);
 

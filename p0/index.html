@@ -163,64 +163,82 @@
                     <h1 class="display-3 text-capitalize mb-3">Queen Marika And The Golden Order</h1>
                 </div>
 
-                <div id="paragraphCarousel" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <p>Marika the Eternal, divine and yet troubled, served as the vessel for the Elden Ring...</p>
-                      </div>
-                      <div class="carousel-item">
-                        <p>For all her grand purpose, Marika did falter. Bound by the strict laws of the Golden Order...</p>
-                      </div>
-                    </div>
-                    
-                    <!-- Controls -->
-                    <button class="carousel-control-prev" type="button" data-bs-target="#paragraphCarousel" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#paragraphCarousel" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
 
-
-                <div class="row g-4">
-                    <div class=" col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="feature-item p-4">
-                            <div class="feature-icon mb-3"><i class="fas fa-hand-holding-water text-white fa-3x"></i></div>
-                            <a href="#" class="h4 mb-3">Quality Check</a>
-                            <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero repellat deleniti necessitatibus</p>
-                            <a href="#" class="btn text-secondary">Read More <i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="feature-item p-4">
-                            <div class="feature-icon mb-3"><i class="fas fa-filter text-white fa-3x"></i></div>
-                            <a href="#" class="h4 mb-3">5 Steps Filtration</a>
-                            <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero repellat deleniti necessitatibus</p>
-                            <a href="#" class="btn text-secondary">Read More <i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="feature-item p-4">
-                            <div class="feature-icon mb-3"><i class="fas fa-recycle text-white fa-3x"></i></div>
-                            <a href="#" class="h4 mb-3">Composition</a>
-                            <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero repellat deleniti necessitatibus</p>
-                            <a href="#" class="btn text-secondary">Read More <i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
-                        <div class="feature-item p-4">
-                            <div class="feature-icon mb-3"><i class="fas fa-microscope text-white fa-3x"></i></div>
-                            <a href="#" class="h4 mb-3">Lab Control</a>
-                            <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero repellat deleniti necessitatibus</p>
-                            <a href="#" class="btn text-secondary">Read More <i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                </div>
+<!-- Unified container for paragraphCarousel and tree borders -->
+<div class="carousel-wrapper">
+    <div id="paragraphCarousel" class="carousel slide" data-bs-interval="false">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <p>Marika the Eternal, divine and yet troubled, served as the vessel for the Elden Ring...</p>
+            </div>
+            <div class="carousel-item">
+                <p>For all her grand purpose, Marika did falter. Bound by the strict laws of the Golden Order...</p>
             </div>
         </div>
+
+        <!-- Left arrow -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#paragraphCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+
+        <!-- Right arrow -->
+        <button class="carousel-control-next" type="button" data-bs-target="#paragraphCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+
+<div class="row g-4">
+    <div class=" col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+        <div class="feature-item p-4">
+            <!-- Replace the icon with an image -->
+            <div class="feature-icon mb-3">
+                <img src="assets/img/godfreyicon.png" alt="Godfrey" class="img-fluid" />
+            </div>
+            <a href="#" class="h4 mb-3">Godfrey</a>
+            <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero repellat deleniti necessitatibus</p>
+            <a href="godfrey.html">Read More <i class="fa fa-angle-right"></i></a>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
+        <div class="feature-item p-4">
+            <div class="feature-icon mb-3">
+                <img src="assets/img/godwyngr.png" alt="Godwyn" class="img-fluid" />
+            </div>
+            <a href="#" class="h4 mb-3">Godwyn</a>
+            <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero repellat deleniti necessitatibus</p>
+            <a href="godwyn.html">Read More <i class="fa fa-angle-right"></i></a>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
+        <div class="feature-item p-4">
+            <div class="feature-icon mb-3">
+                <img src="assets/img/morgotgr.png" alt="Morgott" class="img-fluid" />
+            </div>
+            <a href="#" class="h4 mb-3">Morgott</a>
+            <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero repellat deleniti necessitatibus</p>
+            <a href="morgott.html">Read More <i class="fa fa-angle-right"></i></a>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
+        <div class="feature-item p-4">
+            <div class="feature-icon mb-3">
+                <img src="assets/img/mohggr.jpg" alt="Mohg" class="img-fluid" />
+            </div>
+            <a href="#" class="h4 mb-3">Mohg</a>
+            <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero repellat deleniti necessitatibus</p>
+            <a href="mohg.html">Read More <i class="fa fa-angle-right"></i></a>
+        </div>
+    </div>
+</div>
+</div>
+</div>
         <!-- feature End -->
 
 
