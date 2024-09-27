@@ -235,51 +235,120 @@ body {
 
 
 
+
 /* QUEEN MARIKA CAROUSEL */
 
-/* Basic styling for the carousel container */
 #paragraphCarousel {
     position: relative;
     background-color: #000000; /* Set background to black */
-    width: 900px; /* Keep the carousel wider */
-    height: 200px; /* Keep the carousel shorter */
-    margin: 100px auto 300px auto; /* Margins to center the carousel */
+    width: 900px;
+    height: auto;
+    margin: 100px auto 150px auto; /* Adjust the margin at the bottom */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 30px; /* Horizontal padding */
-    border: transparent; /* Remove border */
+    padding: 20px 30px;
+    border: transparent;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 15px;
-    z-index: 2; /* Make sure content stays above other elements */
+    z-index: 2;
 }
 
-/* Add the top decorative border */
-#paragraphCarousel::before {
-    content: '';
-    position: absolute;
-    top: -250px; /* Position above the carousel */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%; /* Border width */
-    height: 690px;
-    background: url('../img/treeborder.png') no-repeat center;
-    background-size: contain;
-    filter: sepia(1) saturate(1.5) hue-rotate(12deg) brightness(0.6); /* Filter for color adjustment */
+/* Responsive Carousel Fix */
+@media screen and (max-width: 992px) {
+    #paragraphCarousel {
+        width: 90%;
+        height: auto;
+        margin: 80px auto 100px auto; /* Adjust margin for smaller screens */
+    }
 }
 
-/* Add the bottom decorative border */
-#paragraphCarousel::after {
-    content: '';
-    position: absolute;
-    bottom: -80px; /* Position below the carousel */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%; /* Border width */
-    height: 80px;
-    background-size: contain;
-    filter: sepia(1) saturate(1.5) hue-rotate(12deg) brightness(0.6); /* Filter for color adjustment */
+@media screen and (max-width: 768px) {
+    #paragraphCarousel {
+        width: 100%;
+        margin: 50px auto; /* Ensure adequate space on smaller devices */
+    }
+}
+
+
+
+/* FEATURES SECTION WITH NEW GRADIENT BACKGROUND */
+.feature .feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(145deg, rgba(126, 134, 129, 1) 0%, rgba(31, 39, 33, 1) 50%, rgba(15, 25, 20, 1) 100%);
+    border-radius: 15px;
+    transition: 0.5s;
+    padding: 20px;
+    color: #e5c07b;
+    box-shadow: 0px 4px 8px rgba(8, 6, 6, 0.2);
+    margin-bottom: 50px; /* Add space between the cards */
+}
+
+.feature .feature-item:hover {
+    box-shadow: 0 0 45px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(145deg, rgba(77, 97, 63, 1) 0%, rgba(73, 90, 74, 1) 50%, rgba(5, 20, 15, 1) 100%);
+}
+
+/* Fix for Godfrey and other Read More buttons */
+.feature .feature-item a.btn {
+    transition: 0.5s;
+}
+
+.feature .feature-item:hover a.btn:hover {
+    color: #ffffff !important;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 992px) {
+    .feature .feature-item {
+        margin-bottom: 30px; /* Adjust space between feature items for smaller screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .feature .feature-item {
+        margin-bottom: 20px; /* Further adjust for small screens */
+    }
+}
+
+/* Adjusting the paragraph text color inside the cards */
+.feature .feature-item p {
+    color: rgb(224, 217, 175); /* Match the golden text theme */
+}
+
+/* QUEEN MARIKA CAROUSEL */
+
+/* Add the top decorative border for large screens */
+@media screen and (min-width: 992px) {
+    #paragraphCarousel::before {
+        content: '';
+        position: absolute;
+        top: -250px; /* Position above the carousel */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%; /* Border width */
+        height: 690px;
+        background: url('../img/treeborder.png') no-repeat center;
+        background-size: contain;
+        filter: sepia(1) saturate(1.5) hue-rotate(12deg) brightness(0.6); /* Filter for color adjustment */
+    }
+
+    /* Add the bottom decorative border for large screens */
+    #paragraphCarousel::after {
+        content: '';
+        position: absolute;
+        bottom: -80px; /* Position below the carousel */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%; /* Border width */
+        height: 80px;
+        background-size: contain;
+        filter: sepia(1) saturate(1.5) hue-rotate(12deg) brightness(0.6); /* Filter for color adjustment */
+    }
 }
 
 /* Styling for the carousel text */
@@ -288,7 +357,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100%; /* Use full height of the container */
-    padding: 60px 80px; /* Horizontal padding */
+    padding: 50px 80px; /* Horizontal padding */
     text-align: center;
     font-size: 1.4rem; /* Text size */
     color: rgb(224, 217, 175); /* Text color */
@@ -342,60 +411,7 @@ body {
     color: #000000; /* Arrow icon color */
 }
 
-/* MEDIA QUERIES */
-
-/* Fix for the disappearing issue */
-@media screen and (max-width: 992px) {
-    #paragraphCarousel {
-        width: 90%;
-        height: auto;
-        margin: 100px auto;
-    }
-
-    #paragraphCarousel .carousel-item {
-        font-size: 1.2rem;
-        padding: 20px 10px;
-    }
-
-    /* Ensure buttons remain visible */
-    .carousel-control-prev, .carousel-control-next {
-        display: flex;
-        opacity: 1;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    #paragraphCarousel {
-        width: 100%;
-        margin: 50px auto;
-    }
-
-    #paragraphCarousel .carousel-item {
-        font-size: 1.1rem;
-        padding: 15px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    #paragraphCarousel {
-        width: 100%;
-        padding: 10px;
-    }
-
-    #paragraphCarousel .carousel-item {
-        font-size: 1rem;
-        padding: 10px;
-    }
-
-    /* Ensure the buttons stay visible */
-    .carousel-control-prev, .carousel-control-next {
-        display: flex;
-        opacity: 1;
-    }
-}
-
 /* END */
-
 
 
 /*** Spinner Start ***/
@@ -799,6 +815,32 @@ body {
     background: rgba(255, 255, 255, .6);
 }
 
+/* MEDIA QUERIES FOR SMALLER SCREENS */
+
+/* For screens smaller than 992px */
+@media screen and (max-width: 991px) {
+    #paragraphCarousel .carousel-item {
+        padding: 100px 80px; /* Apply the new padding */
+        font-size: 1.2rem;
+    }
+}
+
+/* For screens smaller than 768px */
+@media screen and (max-width: 767px) {
+    #paragraphCarousel .carousel-item {
+        padding: 100px 80px; /* Apply the new padding */
+        font-size: 1.1rem;
+    }
+}
+
+/* For screens smaller than 480px */
+@media screen and (max-width: 479px) {
+    #paragraphCarousel .carousel-item {
+        padding: 100px 80px; /* Apply the new padding */
+        font-size: 1rem;
+    }
+}
+
 /*** Carousel Hero Header End ***/ 
 
 /*** Single Page Hero Header Start ***/
@@ -830,12 +872,15 @@ body {
 
 
 /*** Features Start ***/
+
 .feature .feature-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background: linear-gradient(145deg, rgb(126, 134, 129) 0%, rgb(31, 39, 33) 50%, rgba(15, 25, 20, 1) 100%);
+    background: 
+        linear-gradient(145deg, rgba(126, 134, 129, 1) 0%, rgba(31, 39, 33, 1) 50%, rgba(15, 25, 20, 1) 100%); /* Base gradient */
+    position: relative; /* Ensure the texture is positioned relative to this container */
     border-radius: 15px;
     transition: 0.5s;
     padding: 20px;
@@ -843,9 +888,28 @@ body {
     box-shadow: 0px 4px 8px rgba(8, 6, 6, 0.2);
 }
 
+.feature .feature-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/rubble.png') center center / cover; /* Adding texture as overlay */
+    opacity: 20; /* Control the transparency */
+    border-radius: 15px; /* Ensuring the texture fits inside the border */
+    z-index: 1; /* Ensure the texture stays above the gradient but below text */
+}
+
+.feature .feature-item > * {
+    position: relative;
+    z-index: 2; /* Ensure text and icons stay above the texture */
+}
+
 .feature .feature-item:hover {
     box-shadow: 0 0 45px rgba(0, 0, 0, 0.4);
-    background: linear-gradient(145deg, rgb(77, 97, 63) 0%, rgb(73, 90, 74) 50%, rgba(5, 20, 15, 1) 100%);
+    background: 
+        linear-gradient(145deg, rgba(77, 97, 63, 1) 0%, rgba(73, 90, 74, 1) 50%, rgba(5, 20, 15, 1) 100%);
 }
 
 .feature .feature-item .feature-icon {
@@ -873,6 +937,7 @@ body {
 .feature .feature-item:hover a.btn:hover {
     color: var(--bs-primary) !important;
 }
+
 /*** Features End ***/
 
 
