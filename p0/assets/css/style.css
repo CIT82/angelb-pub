@@ -230,10 +230,8 @@ p {
 }
 
 body {
-    background-color: gray;
+    background-color:  rgb(0, 0, 0);
 }
-
-
 
 
 /* QUEEN MARIKA CAROUSEL */
@@ -847,7 +845,7 @@ body {
 .bg-breadcrumb {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(rgba(0, 20, 66, 0.7), rgba(0, 20, 66, 0.7)), url(../img/breadcrumb.jpg);
+    background: url(../img/siofrarivers.png);
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -985,6 +983,18 @@ body {
     margin-top: -30px;
     margin-left: -30px;
     border-radius: 10px;
+}
+
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    .about-img {
+        height: auto;
+    }
+
+    .about-img .carousel-item img {
+        object-fit: contain;
+    }
 }
 /*** About End ***/
 
@@ -1325,7 +1335,7 @@ body {
 
 /*** Footer Start ***/
 .footer {
-    background: var(--bs-dark);
+    background: black;
 }
 
 .footer .footer-item a {
@@ -1355,6 +1365,12 @@ body {
 .footer .footer-item .footer-btn a:hover i {
     color: var(--bs-primary) !important;
 }
+
+.footer-images {
+    background: url('../img/siofrarivers.png') no-repeat center center / cover;
+    color: #fff;
+}
+
 /*** Footer End ***/
 
 /*** copyright Start ***/
