@@ -679,13 +679,23 @@ body {
         color: inherit !important; /* Ensure it inherits the default color */
     }
 
+
+    .navbar-light .navbar-brand {
+        display: flex;
+        align-items: center; /* Ensure the icon and text align properly */
+        gap: 10px; /* Add space between the icon and the title */
+    }
+    
+    .navbar-light .navbar-brand img {
+        max-height: 90px;
+        max-width: 100px;
+        transition: .5s;
+    }
+
     .navbar-light .navbar-toggler-icon {
         background-color: transparent !important; /* No background */
     }
-
-
 }
-
 
 /*** Carousel Hero Header Start ***/
 
@@ -1401,4 +1411,5 @@ body {
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     background: var(--bs-dark);
 }
+
 /*** copyright end ***/
