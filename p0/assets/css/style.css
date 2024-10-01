@@ -61,6 +61,14 @@ h1 {
     color: rgb(153, 142, 82) !important;
 }
 
+.custom-icon {
+    background-color: transparent !important;
+    filter: none !important;
+    opacity: 1 !important;
+    z-index: 10; /* Ensure it stays on top */
+    display: block; /* Ensure the image displays normally */
+}
+
 /* Navbar brand image transition */
 .navbar-light .navbar-brand img {
     max-height: 60px;
@@ -503,6 +511,8 @@ body {
 
 
 /*** Navbar ***/
+
+
 .navbar-light .navbar-nav .nav-link {
     position: relative;
     margin-right: 25px;
@@ -530,6 +540,7 @@ body {
 
 .sticky-top.navbar-light .navbar-brand img {
     max-height: 45px;
+    
 }
 
 .navbar .dropdown-toggle::after {
@@ -574,10 +585,6 @@ body {
         padding: 10px 0;
         margin-left: 0;
         color: var(--bs-dark);
-    }
-
-    .navbar-light .navbar-brand img {
-        max-height: 45px;
     }
 }
 
@@ -653,6 +660,30 @@ body {
     .navbar-light .navbar-nav .nav-link.nav-contact::before {
         display: none;
     }
+
+    .navbar-light .navbar-brand img {
+        background-color: transparent !important; /* Ensure transparency */
+        filter: none !important; /* Remove filters applied by Bootstrap */
+        opacity: 1 !important; /* Full opacity to ensure clear display */
+        mix-blend-mode: normal !important; /* Prevent blend mode issues */
+        color: inherit !important; /* Avoid color inheritance */
+    }
+
+
+    .navbar-light {
+        background-color: transparent !important; /* Make sure it's transparent */
+        color: inherit !important; /* Inherit colors properly */
+    }
+
+    .navbar-light .navbar-brand {
+        color: inherit !important; /* Ensure it inherits the default color */
+    }
+
+    .navbar-light .navbar-toggler-icon {
+        background-color: transparent !important; /* No background */
+    }
+
+
 }
 
 
@@ -901,11 +932,11 @@ body {
 
 .feature .feature-item > * {
     position: relative;
-    z-index: 2; /* Ensure text and icons stay above the texture */
+    z-index: 3; /* Ensure text and icons stay above the texture */
 }
 
 .feature .feature-item:hover {
-    box-shadow: 0 0 45px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 45px rgba(165, 151, 151, 0.4);
     background: 
         linear-gradient(145deg, rgba(77, 97, 63, 1) 0%, rgba(73, 90, 74, 1) 50%, rgba(5, 20, 15, 1) 100%);
 }
@@ -920,20 +951,12 @@ body {
     background: rgb(58, 71, 65); /* Muted green background for the icon */
 }
 
-.feature .feature-item .feature-icon i {
-    transition: 0.5s;
-}
-
-.feature .feature-item:hover .feature-icon i {
-    transform: rotate(360deg);
-}
-
 .feature .feature-item a.btn {
     transition: 0.5s;
 }
 
 .feature .feature-item:hover a.btn:hover {
-    color: var(--bs-primary) !important;
+    color: red !important;
 }
 
 /*** Features End ***/
