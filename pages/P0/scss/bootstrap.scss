@@ -1,0 +1,46 @@
+/******* Customized Bootstrap ********/
+
+$primary: #00D1F9;
+$secondary: #19409A;
+$light: #F2F9F9;
+$dark: #001442;
+
+/* FONTS */
+@font-face {
+    font-family: 'Mantinia';
+    src: url('../css/Mantinia Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'QESTERO';
+    src: url('../css/QESTERO-Regular.ttf') format('truetype');
+}
+
+/* Apply Fonts */
+body {
+    font-family: 'Mantinia', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'QESTERO', serif !important;
+}
+
+/* Bootstrap Variable Overrides */
+$font-family-base: 'Mantinia', sans-serif;
+$headings-font-family: 'QESTERO', serif;
+
+$body-color: #808080;
+$headings-color: $dark;
+$headings-font-weight: 500;
+$display-font-weight: 700;
+
+$enable-responsive-font-sizes: true;
+$border-radius: 10px;
+$border-radius-sm: $border-radius;
+$border-radius-lg: $border-radius;
+
+$link-decoration: none;
+$enable-negative-margins: true;
+
+/* Import Bootstrap after customizations */
+@import "bootstrap/scss/bootstrap";
