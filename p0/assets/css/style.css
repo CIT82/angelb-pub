@@ -1333,6 +1333,29 @@ body {
 }
 /*** testimonial End ***/
 
+
+
+/* SITE MAP */
+
+.sitemap a {
+    color: rgb(209, 214, 160) !important; /* Gold text color */
+    font-family: 'Playfair Display', serif; /* Apply Playfair Display font */
+    font-size: 18px; /* Adjust the font size if needed */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Add smooth hover transition */
+}
+
+.sitemap a:hover {
+    color: #6d5f3b !important; /* Lighter gold on hover */
+}
+
+.sitemap li {
+    margin-bottom: 10px; /* Add spacing between links */
+}
+
+/* SITE MAP END */
+
+
 /*** Footer Start ***/
 .footer {
     background: black;
