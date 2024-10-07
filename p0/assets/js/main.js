@@ -115,6 +115,37 @@
         });
     });
 
+    // Custom image carousel for images with text
+    document.addEventListener('DOMContentLoaded', function() {
+        // Custom image carousel for images with text
+        let currentCustomSlide = 0;
+        const customImages = document.querySelectorAll('.custom-carousel-images img');
+        const customCarouselImages = document.querySelector('.custom-carousel-images');
+        const customText = document.getElementById('custom-carousel-text');
+        const customImageTexts = [
+            "Text for Image 1",
+            "Text for Image 2",
+            "Text for Image 3"
+        ];
     
+        function updateCustomSlide() {
+            const offset = -currentCustomSlide * 100;
+            customCarouselImages.style.transform = `translateX(${offset}%)`;
+            customText.innerText = customImageTexts[currentCustomSlide]; // This updates the text
+        }
+    
+        window.nextCustomSlide = function() {
+            currentCustomSlide = (currentCustomSlide + 1) % customImages.length;
+            updateCustomSlide();
+        }
+    
+        window.prevCustomSlide = function() {
+            currentCustomSlide = (currentCustomSlide - 1 + customImages.length) % customImages.length;
+            updateCustomSlide();
+        }
+    
+        // Apply initial slide settings
+        updateCustomSlide();
+    });
 })(jQuery);
 
