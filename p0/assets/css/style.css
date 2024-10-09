@@ -23,6 +23,8 @@ h4 {
 }
 
 /* Navbar styling */
+
+
 .navbar-light {
     position: absolute;
     width: 100%;
@@ -223,6 +225,7 @@ body {
 }
 
 /* QUEEN MARIKA CAROUSEL */
+
 #paragraphCarousel {
     position: relative;
     background-color: #000000; /* Set background to black */
@@ -281,7 +284,17 @@ body {
 }
 
 .feature .feature-item:hover a.btn:hover {
-    color: #ffffff !important;
+    color: #d4cc5b !important;
+}
+
+.feature .feature-item a {
+    color: #aca769; /* Change to your preferred color */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.feature .feature-item a:hover {
+    color: #524e16; /* Optional hover effect */
 }
 
 /* MEDIA QUERIES */
@@ -300,6 +313,7 @@ body {
 .feature .feature-item p {
     color: rgb(224, 217, 175); /* Match the golden text theme */
 }
+
 
 /* QUEEN MARIKA CAROUSEL */
 @media screen and (min-width: 992px) {
@@ -329,9 +343,10 @@ body {
     }
 }
 
+
 /* Carousel item text styling */
 #paragraphCarousel .carousel-item {
-    display: flex;
+    display: none; /* Hide all items initially */
     justify-content: center;
     align-items: center;
     height: 100%;
@@ -344,7 +359,8 @@ body {
 }
 
 #paragraphCarousel .carousel-item.active {
-    opacity: 1;
+    display: flex; /* Ensure the active item is shown */
+    opacity: 1; /* Set active item to be visible */
 }
 
 /* Previous and next buttons */
@@ -359,14 +375,6 @@ body {
     align-items: center;
     justify-content: center;
     z-index: 1;
-}
-
-.carousel-control-prev {
-    left: 20px;
-}
-
-.carousel-control-next {
-    right: 20px;
 }
 
 /* Style the arrow icons */
@@ -1354,39 +1362,55 @@ body {
 
 /* SITE MAP END */
 
+/*** CUSTOM.CAROUSEL ***/
 
 .custom-carousel {
     position: relative;
-    max-width: 700px;
-    max-height: 500px; /* Ensure this height is sufficient */
-    margin: 0 auto;
-    margin-top: -150px;
-    overflow: hidden;
+    max-width: 800px;
+    margin: 0 auto; /* Center the carousel */
+    overflow: hidden; /* Hide overflow if necessary */
+}
+
+.custom-carousel-container {
+    margin-top: -60px; /* Adjust this value as needed */
 }
 
 .custom-carousel-images {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+    position: relative;
+    width: 100%;
+    height: 500px; /* Set a fixed height for the carousel to ensure uniform image display */
 }
 
 .custom-carousel-images img {
-    width: 100%;
-    height: auto;
-    flex-shrink: 0;
-    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Allow the image to take up full width */
+    height: 100%; /* Make the image fill the entire container */
+    object-fit: cover; /* Ensure the image fills the container, may crop */
+    opacity: 0; /* Hide all images initially */
+    transition: opacity 1s ease-in-out; /* Smooth fade-in and fade-out effect */
 }
 
-/* Styling for the text below the carousel */
+.custom-carousel-images img.active {
+    opacity: 1; /* Show the active image */
+}
+
+/* Text Below the Carousel */
 .custom-carousel-text {
     text-align: center;
     font-size: 20px;
-    margin-top: 15px;
     color: white;
-    position: relative; /* Added to ensure visibility */
-    z-index: 5; /* Ensure the text is above other elements */
+    background-color: rgba(0, 0, 0, 0.7); /* Optional background for readability */
+    padding: 50px 90px;
+    margin-top: 15px;
+    max-width: 800px; /* Keep the text container same width as carousel */
+    margin: 15px auto; /* Center the text container */
+    position: relative; /* Ensure the text stays below the image */
+    z-index: 1;
 }
 
-/* Navigation button styling */
+/* Navigation buttons styling */
 .custom-carousel-nav {
     position: absolute;
     top: 50%;
@@ -1394,7 +1418,7 @@ body {
     display: flex;
     justify-content: space-between;
     transform: translateY(-50%);
-    z-index: 10; /* Ensure the arrows are on top of the images */
+    z-index: 10; /* Ensure buttons are on top of the images */
 }
 
 .custom-prev, .custom-next {
@@ -1405,6 +1429,8 @@ body {
     font-size: 24px;
     border-radius: 50%;
 }
+
+/** END **/
 
 
 /*** Footer Start ***/

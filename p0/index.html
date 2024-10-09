@@ -165,9 +165,9 @@
                 </div>
 
 
-<!-- Unified container for paragraphCarousel and tree borders -->
+<!-- ParagraphCarousel START -->
 <div class="carousel-wrapper wow fadeInUp">
-    <div id="paragraphCarousel" class="carousel slide" data-bs-interval="false">
+    <div id="paragraphCarousel" class="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <p>Marika the Eternal, divine and yet troubled, served as the vessel for the Elden Ring...</p>
@@ -178,18 +178,19 @@
         </div>
 
         <!-- Left arrow -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#paragraphCarousel" data-bs-slide="prev">
+        <button class="carousel-control-prev" id="prevBtn" type="button">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
 
         <!-- Right arrow -->
-        <button class="carousel-control-next" type="button" data-bs-target="#paragraphCarousel" data-bs-slide="next">
+        <button class="carousel-control-next" id="nextBtn" type="button">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
     </div>
 </div>
+<!-- ParagraphCarousel END -->
 
         <!-- Demigod Family -->
 
@@ -257,11 +258,12 @@
 <!-- Custom Carousel Start -->
 <div class="custom-carousel-container container-fluid py-5" style="background-color: black;">
     <div class="custom-carousel wow fadeInUp">
-        <div class="custom-carousel-images wow fadeInUp">
-            <img src="assets/img/godwyngr.png" alt="Image 1" class="active">
-            <img src="assets/img/lucariatestimg.jpg" alt="Image 2">
-            <img src="assets/img/queenmarika2.png" alt="Image 3">
+        <div class="custom-carousel-images">
+            <img src="assets/img/shattering.jpg" alt="Image 1">
+            <img src="assets/img/shattering2.jpg" alt="Image 2">
+            <img src="assets/img/erdterdtreesealed.jpg" alt="Image 3">
         </div>
+        <!-- Text block -->
         <div class="custom-carousel-text">
             <p id="custom-carousel-text">Text for Image 1</p>
         </div>
@@ -272,8 +274,6 @@
     </div>
 </div>
 <!-- Custom Carousel End -->
-
-        <!-- Service End -->
 
 
         <!-- Products Start -->
@@ -477,90 +477,7 @@
         </div>
         <!-- Team End -->
 
-        <!-- Testimonial Start -->
-        <div class="container-fluid testimonial pb-5" style="background-color: black;">
-            <div class="container pb-5">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                    <h4 class="text-uppercase">Testimonials</h4>
-                    <h1 class="display-3 text-capitalize mb-3">Our clients reviews.</h1>
-                </div>
-                <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="testimonial-item text-center p-4">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt pariatur officiis quis molestias, sit iure sunt voluptatibus accusantium laboriosam dolore.
-                        </p>
-                        <div class="d-flex justify-content-center mb-4">
-                            <img src="assets/img/testimonial-1.jpg" class="img-fluid border border-4 border-primary" style="width: 100px; height: 100px; border-radius: 50px;" alt="">
-                        </div>
-                        <div class="d-block">
-                            <h4 class="text-dark">Client Name</h4>
-                            <p class="m-0 pb-3">Profession</p>
-                            <div class="d-flex justify-content-center text-secondary">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item text-center p-4">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt pariatur officiis quis molestias, sit iure sunt voluptatibus accusantium laboriosam dolore.
-                        </p>
-                        <div class="d-flex justify-content-center mb-4">
-                            <img src="assets/img/testimonial-2.jpg" class="img-fluid border border-4 border-primary" style="width: 100px; height: 100px; border-radius: 50px;" alt="">
-                        </div>
-                        <div class="d-block">
-                            <h4 class="text-dark">Client Name</h4>
-                            <p class="m-0 pb-3">Profession</p>
-                            <div class="d-flex justify-content-center text-secondary">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item text-center p-4">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt pariatur officiis quis molestias, sit iure sunt voluptatibus accusantium laboriosam dolore.
-                        </p>
-                        <div class="d-flex justify-content-center mb-4">
-                            <img src="assets/img/testimonial-3.jpg" class="img-fluid border border-4 border-primary" style="width: 100px; height: 100px; border-radius: 50px;" alt="">
-                        </div>
-                        <div class="d-block">
-                            <h4 class="text-dark">Client Name</h4>
-                            <p class="m-0 pb-3">Profession</p>
-                            <div class="d-flex justify-content-center text-secondary">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item text-center p-4">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt pariatur officiis quis molestias, sit iure sunt voluptatibus accusantium laboriosam dolore.
-                        </p>
-                        <div class="d-flex justify-content-center mb-4">
-                            <img src="assets/img/testimonial-3.jpg" class="img-fluid border border-4 border-primary" style="width: 100px; height: 100px; border-radius: 50px;" alt="">
-                        </div>
-                        <div class="d-block">
-                            <h4 class="text-dark">Client Name</h4>
-                            <p class="m-0 pb-3">Profession</p>
-                            <div class="d-flex justify-content-center text-secondary">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Testimonial End -->
+
 
         <!-- Footer Start -->
         <div class="container-fluid footer py-5" style="background-color: black;">
