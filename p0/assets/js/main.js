@@ -187,6 +187,5 @@
         // Apply initial slide settings
         updateCustomSlide();
     });
-
 })(jQuery);
 
