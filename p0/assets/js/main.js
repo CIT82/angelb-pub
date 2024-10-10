@@ -187,5 +187,28 @@
         // Apply initial slide settings
         updateCustomSlide();
     });
+
+
+
+    const form = document.querySelector("form");
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        // Create a new FormData object
+        const formData = new FormData(form);
+
+        // Send the form data via AJAX
+        fetch("contact.php", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+            alert(data); // Show success or error message
+        })
+        .catch(error => {
+            alert("Error: " + error);
+        });
+    });
 })(jQuery);
 

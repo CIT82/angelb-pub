@@ -1349,6 +1349,59 @@ body {
 /** END **/
 
 
+.timeline-image {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.timeline-section  {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 40px 0;
+}
+
+.timeline-header h1 {
+    font-size: 48px;
+    font-family: 'Playfair Display', serif;
+}
+
+.timeline-event {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.timeline-event .icon {
+    background-color: #f0a500;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    margin-right: 20px;
+    color: #fff;
+}
+
+.timeline-event .content {
+    flex: 1;
+}
+
+.timeline-event .content h3 {
+    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 10px;
+}
+
+.timeline-event .content p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
 /*** Footer Start ***/
 .footer {
     background: black;
@@ -1387,13 +1440,25 @@ body {
     color: #fff;
 }
 
-.footer-custom-img {
-    width: 50px; /* Set the width to make the image smaller */
-    height: auto; /* Keep the aspect ratio */
-    margin-right: 10px; /* Optional: Add some space between the image and the text */
-    vertical-align: middle; /* Align the image vertically with the text */
+.footer-sitemap {
+    display: flex;              /* Make the sitemap links horizontal */        
+    gap: 10px;                  /* Add space between links */
 }
 
+.sitemap-link {
+    display: inline-block;      /* Ensure links are displayed inline */
+    margin-right: 15px;         /* Space between links */
+    color: #fff;                /* Make text color white */
+    text-decoration: none;      /* Remove underline */
+}
+
+.sitemap-link:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+.sitemap-link i {
+    margin-right: 5px;          /* Space between icon and text */
+}
 /*** Footer End ***/
 
 /*** copyright Start ***/
