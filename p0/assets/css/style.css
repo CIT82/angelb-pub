@@ -879,11 +879,10 @@ body {
 .bg-breadcrumb {
     position: relative;
     overflow: hidden;
-    background: url('../img/siofrarivers.png') !important;
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 120px 0 60px 0;
+    padding: 10px 0 10px 0;
     transition: 0.5s;
 }
 
@@ -894,6 +893,119 @@ body {
 .bg-breadcrumb .breadcrumb .breadcrumb-item a {
     color: var(--bs-white);
 }
+
+.royalty-page {
+    background: url('../img/rennala.jpg') no-repeat center center;
+    background-size: cover;
+    min-height: 100vh; /* Ensures that the page is at least 100% of the viewport height */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    display: block; /* Ensures it behaves like a block element */
+}
+
+/* Custom styles for royalty.html */
+.royalty-page .bg-light {
+    background-color: transparent !important;
+}
+
+.royalty-page .carousel-item {
+    background-color: transparent; /* Ensure the background of each slide is transparent */
+}
+
+.royalty-page .about-img {
+    /* Adjust transparency for the image if needed */
+    opacity: 0.9;
+}
+
+.royalty-page .about-item {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    padding: 20px;
+    border-radius: 10px;
+    color: white; /* Ensures readability */
+}
+
+.godfrey-page {
+    background-image: url('../img/stormveil.jpg'); /* Make sure the path is correct */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    color: white; /* Adjust text color to be readable against the background */
+}
+
+.godfrey-page .about-item {
+    background-color: rgba(0, 0, 0, 0.7); /* Optional: Add a semi-transparent background for text readability */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.mohg-page {
+    background-image: url('../img/mohgpalace.jpg'); /* Make sure the path is correct */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    color: white; /* Adjust text color to be readable against the background */
+}
+
+.mohg-page .about-item {
+    background-color: rgba(0, 0, 0, 0.7); /* Optional: Add a semi-transparent background for text readability */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.morgott-page {
+    background-image: url('../img/leyndell.jpg'); /* Make sure the path is correct */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    color: white; /* Adjust text color to be readable against the background */
+}
+
+.morgott-page .about-item {
+    background-color: rgba(0, 0, 0, 0.7); /* Optional: Add a semi-transparent background for text readability */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.godwyn-page {
+    background-image: url('../img/face.png'); /* Make sure the path is correct */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    color: white; /* Adjust text color to be readable against the background */
+}
+
+.godwyn-page .about-item {
+    background-color: rgba(0, 0, 0, 0.7); /* Optional: Add a semi-transparent background for text readability */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.erdtree-page .about-item {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    padding: 20px;
+    border-radius: 10px;
+    color: white; /* Ensures readability */
+}
+
+.finger-page .about-item {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    padding: 20px;
+    border-radius: 10px;
+    color: white; /* Ensures readability */
+}
+
+.lands-page .about-item {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    padding: 20px;
+    border-radius: 10px;
+    color: white; /* Ensures readability */
+}
+
+
+
 
 @media (max-width: 992px) {
     .bg-breadcrumb {
@@ -960,6 +1072,24 @@ body {
 
 .feature .feature-item:hover a.btn:hover {
     color: red !important;
+}
+
+.royalty-feature .feature-item {
+    background-color: rgba(128, 128, 128, 0.8) !important; /* Gray with transparency */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    transition: all 0.3s ease;
+    color: #fff; /* Ensuring the text is still visible */
+}
+
+.royalty-feature .feature-item:hover {
+    background-color: rgba(100, 100, 100, 0.9) !important; /* Darker gray on hover */
+}
+
+.royalty-feature .feature-icon {
+    background-color: rgba(50, 50, 50, 0.9); /* Different background color for icons */
+    padding: 20px;
+    border-radius: 50%; /* Circular background for the icon */
 }
 
 /*** Features End ***/
